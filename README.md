@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Ismael Prado da Cruz Costa
+- Matrícula: 18.1.8022 
+- Curso: Sistemas de informação
+- Semestre/Ano correntes: 2021/2
+- Link para o seu GitHub: [ismael027](https://github.com/ismael027)
 
 ## [Projeto final:](./Projeto/README.md)
 
