@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <main>
+
+            <div class="result">
+                <input type="text" id="result" value="" disabled>
+
+            </div>
+
+            <div class="corpo">
+
+                <table>
+
+                    <tbody>
+                        <tr>
+                            <td> <input type="button" value="AC" onclick="ApagarTudo()"> </td>
+                            <td> <input type="button" value="CE" onclick="Deletar()"> </td>
+                            <td> <input type="button" value="%" onclick="ColocarOperacao('%')"> </td>
+                            <td> <input type="button" value="/" onclick="ColocarOperacao('/')"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> <input type="button" value="7" onclick="ColocarNumero(7)"> </td>
+                            <td> <input type="button" value="8" onclick="ColocarNumero(8)"> </td>
+                            <td> <input type="button" value="9" onclick="ColocarNumero(9)"> </td>
+                            <td> <input type="button" value="x" onclick="ColocarOperacao('x')"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> <input type="button" value="4" onclick="ColocarNumero(4)"> </td>
+                            <td> <input type="button" value="5" onclick="ColocarNumero(5)"> </td>
+                            <td> <input type="button" value="6" onclick="ColocarNumero(6)"> </td>
+                            <td> <input type="button" value="-" onclick="ColocarOperacao('-')"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> <input type="button" value="1" onclick="ColocarNumero(1)"> </td>
+                            <td> <input type="button" value="2" onclick="ColocarNumero(2)"> </td>
+                            <td> <input type="button" value="3" onclick="ColocarNumero(3)"> </td>
+                            <td> <input type="button" value="+" onclick="ColocarOperacao('+')"> </td>
+                        </tr>
+
+                        <tr>
+                            <td> </td>
+                            <td> <input type="button" value="0" onclick="ColocarNumero(0)"> </td>
+                            <td> <input type="button" value="." onclick="ColocarNumero('.')"> </td>
+                            <td> <input type="button" value="=" class="igual" onclick="Resultado()"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
