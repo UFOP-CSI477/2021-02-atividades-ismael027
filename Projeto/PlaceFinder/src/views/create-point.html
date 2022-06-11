@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-create-point" %}
+
+{% block title %}
+    <title>Criar um estabelecimento</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/create-point.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+
+    <form action="/savepoint" method="POST">
+
+        <h1>Cadastro do estabelecimento</h1>
+
+        <fieldset>
+            <legend>
+                <h2>Dados do estabelecimento</h2>
+            </legend>
+
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="name">Nome do estabelecimento</label>
+                    <input type="text" name="name" required="required">
+                </div>
+                <div class="field">
+                    <label for="name">Imagem do estabelecimento</label>
+                    <input 
+                        type="url" 
+                        name="image" 
+                        placeholder="http://"
+                        required="required">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="address">Endereço</label>
+                    <input type="text" name="address" required="required">
+                </div>
+                <div class="field">
+                    <label for="address2">Número/Complemento</label>
+                    <input type="text" name="address2" required="required">
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="state">Estado</label>
+                    <select name="uf" required="required">
+                        <option value="">Selecione o Estado</option>
+                    </select>
+
+                    <input type="hidden" name="state">
+                </div>
+
+                <div class="field">
+                    <label for="city">Cidade</label>
+                    <select name="city" disabled="disabled" required="required">
+                        <option value="">Selecione a Cidade</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                    <label for="description">Descrição</label>
+                    <input type="text" name="description" required="required">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h2>Tipo do estabelecimento</h2>
+                <span>Selecione um ou mais tipos abaixo</span>
+            </legend>
+
+            <div class="items-grid">
+                <li data-id="Restaurante">
+                    <img src="/assets/restaurant.svg" alt="Restaurante">
+                    <span>Restaurante</span>
+                </li>
+
+                <li data-id="Bar">
+                    <img src="/assets/bar.svg" alt="Bar">
+                    <span>Bar</span>
+                </li>
+
+                <li data-id="Boate">
+                    <img src="/assets/boate.svg" alt="Boate">
+                    <span>Boate</span>
+                </li>
+
+                <li data-id="Shopping">
+                    <img src="/assets/shopping.svg" alt="Shopping">
+                    <span>Shopping</span>
+                </li>
+
+                <li data-id="Parque de Diversão">
+                    <img src="/assets/parque-diversao.svg" alt="Parque de Diversão">
+                    <span>Parque de Diversão</span>
+                </li>
+
+                <li data-id="Ponto Turístico">
+                    <img src="/assets/parque.svg" alt="Ponto Turístico">
+                    <span>Ponto Turístico</span>
+                </li>
+
+                <li data-id="Hotel">
+                    <img src="/assets/hotel.svg" alt="Hotel">
+                    <span>Hotel</span>
+                </li>
+
+                <li data-id="Cinema">
+                    <img src="/assets/cinema.svg" alt="Cinema">
+                    <span>Cinema</span>
+                </li>
+
+                <li data-id="Estádio">
+                    <img src="/assets/stadium.svg" alt="Estádio">
+                    <span>Estádio</span>
+                </li>
+            </div>
+
+            <input type="hidden" name="type">
+
+        </fieldset>
+
+        <button type="submit">Cadastrar estabelecimento</button>
+    </form>
+
+    
+{% endblock content%}
+
+
+{% block modal %}
+    {% if saved %}
+        {%include "partials/point-created.html"%}
+    {% endif %}
+{% endblock modal %}
+
+
+{% block scripts %}
+    <script src="/scripts/create-point.js"></script>
+{% endblock scripts %}

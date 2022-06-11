@@ -1,0 +1,84 @@
+// importar a dependencia do sqlite3
+const sqlite3 = require("sqlite3").verbose()
+
+// criar o objeto que irá fazer operações no banco de dados
+const db = new sqlite3.Database("./src/database/database.db")
+
+module.exports = db
+// utilizar o objeto de banco de dados, para nossas operações
+db.serialize(() => {
+
+   // com commandos SQL eu vou:
+
+    // 1 Criar uma tabela 
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            image TEXT,
+            name TEXT,
+            address TEXT,
+            address2 TEXT,
+            state TEXT,
+            city TEXT,
+            type TEXT,
+            description TEXT
+        );
+    `)
+
+    // 2 Inserir dados na tabela
+    const query = `
+        INSERT INTO places (
+            image,
+            name,
+            address,
+            address2,
+            state,
+            city,
+            type,
+            description
+        ) VALUES (?,?,?,?,?,?,?,?);
+    `
+
+    const values = [
+        "data:image/jpeg;base64,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",
+        "Shopping Itaú",
+        "Av. General David Sarnoff, Cidade Industrial",
+        "Número 5160",
+        "Minas Gerais",
+        "Contagem",
+        "Shopping",
+        "Estacionamento amplo"
+    ]
+
+    function afterInsertData(err) {
+        if(err) {
+            return console.log(err)
+        }
+
+        console.log("Cadastrado com sucesso")
+        console.log(this)
+    }
+
+    db.run(query, values, afterInsertData)
+
+
+   // 3 Consultar os dados da tabela
+    db.all(`SELECT * FROM places`, function(err, rows) {
+        if(err) {
+            return console.log(err)
+        }
+
+        console.log("Aqui estão seus registros: ")
+        console.log(rows)
+    })
+
+    //4 Deletar um dado da tabela
+    // db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
+    //     if(err) {
+    //         return console.log(err)
+    //     }
+
+    //     console.log("Registro deletado com sucesso!")
+    // })
+
+})

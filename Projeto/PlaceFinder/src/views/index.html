@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+
+{% block content %}
+    <div class="content">
+        <header>
+            <img src="/assets/Logo.svg" alt="Logomarca">
+            <a href="/create-point">
+                <span></span>
+                Cadastre um lugar
+            </a> 
+        </header>
+
+        <main>
+            <h1>Encontre os melhores lugares não importa onde esteja!</h1>
+                
+            <p>Seja para viajar ou sair com os amigos, no PlaceFinder
+                você encontra os melhores bares, restaurantes, hotéis e 
+                pontos turísticos de qualquer cidade!
+            </p>
+        
+            <a href="#"><span></span><strong>Pesquisar Lugares</strong></a>
+        </main>
+    </div>
+{% endblock content %}
+
+       
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}
+
