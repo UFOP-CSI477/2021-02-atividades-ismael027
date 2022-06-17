@@ -1,0 +1,50 @@
+h1{
+    background-color: #455A64;
+    margin-bottom: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    background-color: #c6c6c6;
+    margin-bottom: 10px;
+}
+.menus{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a:hover{
+  color: #39bfd7;
+  background: #f7f7f7;
+  border: 1px solid #4ab3c6;
+  padding: 10px;
+}
+label{
+    font-weight: bold;
+    padding: 10px;
+}
+input:not([type="radio"]){
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 400px;
+    padding: 10px;    
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    transition: all 0.2s linear;
+}
+input:hover[type = "submit"]{
+    color: #39bfd7;
+    background: #f7f7f7;
+    border: 1px solid #4ab3c6;
+}
+input:hover[type = "reset"]{
+    color: #39bfd7;
+    background: #f7f7f7;
+    border: 1px solid #4ab3c6;
+}

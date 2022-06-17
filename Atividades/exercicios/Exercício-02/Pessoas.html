@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pessoas</title>
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="Tabela.css">
+</head>
+<body>
+    <h1>Site em construção!</h1>
+    <div class="flex">
+        <div class="menus">
+            <a href="Home.html">Home</a>
+        </div>
+        <div class="menus">
+            <a href="Estados.html">Estados</a>
+        </div>
+        <div class="menus">
+            <a href="Cidades.html">Cidades</a>
+        </div>
+        <div class="menus">
+            <a href="Produtos.html">Produtos</a>
+        </div>
+        <div class="menus">
+            <a href="Pessoas.html">Pessoas</a>
+        </div>
+        <div class="menus">
+            <a href="Compras.html">Compras</a>
+        </div>
+        <div class="menus">
+            <a href="Perfil.html">Perfil</a>
+        </div>
+        <div class="menus">
+            <a href="Sair.html">Sair</a>
+        </div>
+        
+    </div>
+
+    <form method ="POST" action="Validar.html">
+             <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+            </div>
+
+            <div>
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx">
+            </div>
+
+            <div>
+                <label for="datanasc">Data de Nascimento:</label>
+                <input type="date" name="datanasc" id="datanasc">
+            </div>
+
+            <div>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(DDD) xxxxx-xxxx">
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="cep">CEP:</label>
+                <input type="number" name="cep" id="cep">
+            </div>
+
+            <div>
+                <label for="endereco">Endereço:</label>
+                <input type="text" name="endereco" id="endereco">
+            </div>
+
+            <div>
+                <label for="numero">Numero:</label>
+                <input type="text" name="numero" id="numero">
+            </div>
+
+            <div>
+                <label for="bairro">Bairro:</label>
+                <input type="text" name="bairro" id="bairro">
+            </div>
+
+            <div>
+                <label for="estado">Estado:</label>
+                <input type="text" name="estado" id="estado">
+            </div>
+
+            <div>
+                <label for="cidade">Cidade:</label>
+                <input type="text" name="cidade" id="cidade">
+            </div>
+
+            <div>
+                <label>Gênero:</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="masculino" value="M">
+                <label for="masculino">Masculino</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="feminino" value="F">
+                <label for="feminino">Feminino:</label>
+            </div>
+            <div>
+                <input type="radio" name="genero" id="outro" value="O">
+                <label for="outro">Prefiro não informar:</label>
+            </div>
+
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data Nascimento</th>
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                </tr>
+            </thead>
+
+            <tbody class="centralizado">
+                <tr>
+                    <td>Antônio Fernandes</td>
+                    <td>643.113.002-20</td>
+                    <td>27/03/1946</td>
+                    <td>(81) 9242-3991</td>
+                    <td>antoniomelofernandes@superrito.com</td>
+                </tr>
+
+                <tr>
+                    <td>Matilde Correia</td>
+                    <td>566.855.415-55</td>
+                    <td>23/02/1933</td>
+                    <td>(51) 6483-2226</td>
+                    <td>matildeoliveiracorreia@jourrapide.com</td>
+                </tr>
+
+                <tr>
+                    <td>Tiago Pereira</td>
+                    <td>288.724.632-11</td>
+                    <td>22/08/1962</td>
+                    <td>(45) 4639-4594</td>
+                    <td>tiagocardosopereira@gustr.com</td>
+                </tr>
+
+                <tr>
+                    <td>Sofia Gomes</td>
+                    <td>733.002.479-18</td>
+                    <td>11/05/1967</td>
+                    <td>(19) 9242-5701</td>
+                    <td>sofiacostagomes@einrot.com</td>
+                </tr>
+            </tbody>
+                
+            <tfoot>
+                <tr>
+                    <td colspan="3">Quantidade</td>
+                    <td colspan="2">5</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+        <a href="Home.html">Voltar</a>
+</body>
+</html>

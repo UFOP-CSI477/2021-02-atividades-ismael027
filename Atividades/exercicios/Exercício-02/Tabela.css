@@ -1,0 +1,34 @@
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+}
+th {
+    font-size: 14pt;
+    font-family: Tahoma;
+}
+caption {
+    font-size: 14pt;
+    font-family: Tahoma;
+    font-weight: bold;
+}
+tbody tr:hover{
+    background-color: #455A64;
+}
+tfoot tr:hover{
+    background-color: #455A64;
+}
+
+tbody tr:nth-child(odd) { /* an + b */
+    background-color: #c6c6c6;
+}
+.centralizado {
+    text-align: center;
+}
