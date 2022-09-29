@@ -1,0 +1,290 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px;
+  color: #121214;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: #a2b9bc;
+}
+
+.displayInvisible {
+  display: none;
+}
+
+.teste {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+
+
+
+      li {
+          list-style: none;
+          & + li {
+              margin-top: 15px;
+          }
+          .actionList {
+              
+              display: flex;
+              flex-direction: column;
+              justify-items: center;
+              align-items: center;
+              background-color: rgba(146, 146, 146, 0.13);
+              list-style: none;
+              padding: 20px;
+              text-align: center;
+              border-radius: 8px;
+              width: 400px;
+              text-decoration: none;
+              list-style: none;
+          }
+
+          span {
+              margin: 5px 0;
+          }
+      }
+  }
+}
+
+.containerList {
+              
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: rgba(146, 146, 146, 0.13);
+  list-style: none;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  width: 400px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.link {
+  list-style-type: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.link:hover {
+color: rgb(134, 134, 134);
+}
+
+.buttonCreate {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 150px;
+  height: 50px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 10px;
+  background-color: rgba(123, 255, 0, 0.151);
+  font-size: 15px;
+}
+.buttonCreate:hover {
+  background-color: rgba(123, 255, 0, 0.466);
+}
+
+.buttonDelete {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 120px;
+  height: 35px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 10px;
+  background-color: rgba(250, 0, 0, 0.158);
+  font-size: 15px;
+}
+
+.buttonDelete:hover {
+  background-color: rgba(250, 0, 0, 0.507);
+}
+
+.buttonUpdate {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 120px;
+  height: 35px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 10px;
+  background-color: rgba(243, 243, 243, 0.432);
+  font-size: 15px;
+}
+
+.buttonUpdate:hover {
+  background-color: rgba(156, 156, 156, 0.534);
+}
+
+.buttonDeleteInput {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 80px;
+  height: 20px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 6px;
+  background-color: rgba(250, 0, 0, 0.158);
+  font-size: 10px;
+}
+
+.buttonDeleteInput:hover {
+  background-color: rgba(250, 0, 0, 0.507);
+}
+
+.buttonUpdateInput {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 80px;
+  height: 20px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 6px;
+  background-color: rgba(243, 243, 243, 0.432);
+  font-size: 10px;
+}
+
+.buttonUpdateInput:hover {
+  background-color: rgb(156, 156, 156);
+}
+
+.buttonCreateInput {
+  cursor: pointer;
+  margin: 10px 0;
+  width: 80px;
+  height: 20px;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 6px;
+  background-color: rgba(123, 255, 0, 0.151);
+  font-size: 10px;
+}
+
+.buttonCreateInput:hover {
+  background-color: rgba(123, 255, 0, 0.466);
+}
+
+.create {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input, select {
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid gray;
+      border-radius: 10px;
+      & + input, & + select {
+          margin: 10px 0;
+      }
+  }
+}
+
+.alterAction {
+  background-color: rgba(146, 146, 146, 0.13);
+  padding: 20px 100px;
+  border-radius: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  li {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+h2 {
+  margin: 10px 0; 
+}
+
+.navegation {
+  width: 100%;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  background-color: #878f99;
+  padding: 5px;
+
+  .buttonNav {
+      width: 50px;
+      color: black;
+      text-decoration: none;
+      list-style: none;
+      font-size: 20px;
+  }
+  .buttonNav:hover {
+      color: rgb(77, 77, 77);
+  }
+}
+
+.login {
+  margin: 14% 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  input, select {
+      width: 400px;
+      height: 50px;
+      text-align: center;
+      margin: 10px 0; 
+      border: 1px solid rgb(189, 189, 189);
+      border-radius: 10px;
+  }
+
+  .buttonLogin {
+      cursor: pointer;
+      width: 200px;
+      height: 50px;
+      border: 1px solid rgb(189, 189, 189);
+      border-radius: 10px;
+      margin: 15px 0;
+  }   
+
+  .buttonCada {
+      width: 80px;
+      height: 40px;
+      border: 1px solid rgb(189, 189, 189);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 10px;
+
+      .link {
+          text-decoration: node;
+          list-style: none;
+      }
+  }
+} 
+
+#infos {
+  p {
+      font-size: 20px;
+      margin-top: 20px;
+  }
+
+
+}
+
+.teste {
+  padding: 20px;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+}
